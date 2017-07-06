@@ -1,0 +1,75 @@
+{% extends "appbuilder/base.html" %}
+{% import 'appbuilder/general/lib.html' as lib %}
+
+
+    {% block head_js %}
+        <script src="{{url_for('static',filename='js/jquery-2.0.3.min.js')}}"></script>
+        <script src="{{url_for('static',filename='js/ab_filters.js')}}"></script>
+        <script src="{{url_for('static',filename='js/ab_actions.js')}}"></script>
+        <script src="{{url_for('static',filename='js/bootstrap-3.0.0.min.js')}}"></script>
+        <script src="{{url_for('static',filename='js/bootstrap-editable-1.5.0.js')}}"></script>
+        <script src="{{url_for('static',filename='js/editable.js')}}"></script>
+    {% endblock %}
+
+    {% block head_css %}
+        <link href="{{url_for('static',filename='css/bootstrap-3.0.0.min.css')}}" rel="stylesheet">
+        <link href="{{url_for('static',filename='css/font-awesome.min.css')}}" rel="stylesheet">
+        {% if appbuilder.app_theme %}
+           <link href="{{url_for('static',filename='css/themes/'+ appbuilder.app_theme )}}"  rel="stylesheet">
+        {% endif %}
+
+         <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+         <!--[if lt IE 9]>
+            <script src="{{url_for('static',filename='js/html5shiv.js')}}"></script>
+            <script src="{{url_for('static',filename='js/respond.min.js')}}"></script>
+         <![endif]-->
+
+        <link href="{{url_for('static',filename='datepicker/bootstrap-datepicker.css')}}" rel="stylesheet">
+        <link href="{{url_for('static',filename='select2/select2.css')}}" rel="stylesheet">
+        <link href="{{url_for('static',filename='css/flags/flags16.css')}}" rel="stylesheet">
+        <link href="{{url_for('static',filename='css/ab.css')}}" rel="stylesheet">
+        <link href="{{url_for('static',filename='css/bootstrap-editable-1.5.1.css')}}" rel="stylesheet">
+    {% endblock %}
+
+
+
+{% block content %}
+
+
+{{ lib.panel_begin(title) }}
+
+
+{% if related_views %}
+    <ul class="nav nav-tabs">
+    <li class="active"><a href="#Home" data-toggle="tab">{{ _("Detail") }}</a> </li>
+        {% for view in related_views %}
+            <li>
+                <a href="#{{view.__class__.__name__}}" data-toggle="tab">{{view.title}}</a>
+            </li>
+        {% endfor %}
+    </ul>
+
+    <div class="tab-content">
+
+    {% for view in related_views %}
+        <div id="{{view.__class__.__name__}}" class="tab-pane">
+            {{ widgets.get('related_views')[loop.index - 1](pk = pk)|safe }}
+        </div>
+    {% endfor %}
+{% endif %}
+
+
+{% block show_form %}
+    <div id="Home" class="tab-pane active">
+        {{ widgets.get('show')()|safe }}
+    </div>
+{% endblock show_form %}
+
+{% if related_views %}</div>{% endif %}
+{{ lib.panel_end() }}
+
+{% endblock content %}
+
+{% block add_tail_js %}
+<script src="{{url_for('static',filename='js/ab_keep_tab.js')}}"></script>
+{% endblock %}

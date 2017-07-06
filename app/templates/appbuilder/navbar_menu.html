@@ -1,0 +1,208 @@
+{% extends 'appbuilder/baselayout.html' %}
+
+    {% block navbar %}
+
+ <header class=" bd-headerarea-1 bd-margins">
+        <div data-affix
+     data-offset=""
+     data-fix-at-screen="top"
+     data-clip-at-control="top"
+     
+ data-enable-lg
+     
+ data-enable-md
+     
+ data-enable-sm
+     
+     class=" bd-affix-2 bd-no-margins bd-margins "><section class=" bd-section-4 bd-tagstyles  " id="section4" data-section-title="">
+    <div class="bd-container-inner bd-margins clearfix">
+        <div class=" bd-layoutbox-3 bd-page-width  bd-no-margins clearfix">
+    <div class="bd-container-inner">
+        <div class=" bd-layoutbox-11 bd-no-margins clearfix">
+    <div class="bd-container-inner">
+        
+    
+    <nav class=" bd-hmenu-7" data-responsive-menu="true" data-responsive-levels="expand on click">
+        
+            <div class=" bd-responsivemenu-6 collapse-button">
+    <div class="bd-container-inner">
+        <div class="bd-menuitem-59 ">
+            <a  data-toggle="collapse"
+                data-target=".bd-hmenu-7 .collapse-button + .navbar-collapse"
+                href="#" onclick="return false;">
+                    <span></span>
+            </a>
+        </div>
+    </div>
+</div>
+            <div class="navbar-collapse collapse">
+            
+            <div class=" bd-horizontalmenu-9 clearfix">
+                <div class="bd-container-inner">
+                    
+                    <ul class=" bd-menu-18 nav nav-pills navbar-left">
+                        
+
+                        
+
+                        
+
+                        
+
+                        
+
+                        
+
+                        
+
+                        
+                        
+                            
+                            <li class=" bd-menuitem-54
+                                        
+                                        bd-toplevel-item
+                                        
+                                        "
+                                    >
+
+                                
+                            
+                            <a 
+ class="active" href="{{ url_for('MyIndex.index') }}" >Home</a>
+
+                                
+                                    
+                            
+                            
+                            </li>
+                            
+                            <li class=" bd-menuitem-54
+                                        
+                                        bd-toplevel-item
+                                        
+                                        "
+                                    >
+
+                                
+                            
+                            <a  href="{{ url_for('MyIndex.about') }}" >About</a>
+
+                                
+                                    
+                            
+                            
+                            </li>
+                            
+                            <li class=" bd-menuitem-54
+                                        
+                                        bd-toplevel-item
+                                        
+                                        "
+                                    >
+
+                                
+                            
+                            <a  href="{{ url_for('MyIndex.events') }}" >Events</a>
+
+                                
+                                    
+                            
+                            
+                            </li>
+                            
+                            <li class=" bd-menuitem-54
+                                        
+                                        bd-toplevel-item
+                                        
+                                        "
+                                    >
+
+                                
+                            
+                            <a  href="{{ url_for('MyIndex.contact') }}" >Contacts</a>
+
+                                
+                                    
+                            
+                            
+                            </li>
+                            
+                            <li class=" bd-menuitem-54
+                                        
+                                        bd-toplevel-item
+                                        
+                                        "
+                                    >
+
+                                
+                            
+                            <a  href="{{ url_for('MyIndex.volunteer') }}" >Volunteer</a>
+
+                                
+                                    
+                            
+                            
+                            </li>
+                            
+                            <li class=" bd-menuitem-54
+                                        
+                                        bd-toplevel-item
+                                        
+                                        "
+                                    >
+
+                                
+                            
+                            <a  href="{{ url_for('MyIndex.donate') }}" >Donate</a>
+
+                                
+                                    
+                            
+                            
+                            </li>
+                    </ul>
+                    
+                </div>
+            </div>
+            
+        
+            </div>
+    </nav>
+    </div>
+</div>
+	
+		<div class=" bd-layoutbox-15 bd-no-margins clearfix">
+    <div class="bd-container-inner">
+        <div class=" bd-socialicons-2">
+    
+        <a target="_blank" data-social-url data-path-to-root="." class=" bd-socialicon-17 bd-socialicon"
+   href="//www.facebook.com/sharer.php?u=">
+    <span class="bd-icon"></span><span></span>
+</a>
+    
+        <a target="_blank" data-social-url data-path-to-root="." class=" bd-socialicon-18 bd-socialicon"
+   href="//twitter.com/share?url=&amp;text=">
+    <span class="bd-icon"></span><span></span>
+</a>
+    
+    
+    
+    
+        <a target="_blank" data-social-url data-path-to-root="." class=" bd-socialicon-22 bd-socialicon"
+   href="//instagram.com/">
+    <span class="bd-icon"></span><span></span>
+</a>
+    
+    
+    
+    
+</div>
+    </div>
+</div>
+    </div>
+</div>
+    </div>
+</section></div>
+</header>
+
+        {% endblock %}

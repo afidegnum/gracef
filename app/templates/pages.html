@@ -1,0 +1,16 @@
+
+
+
+{#{% for q in items %}#}
+{# <li><h2>{{ q.title }}</h2>#}
+{#    {% for a in q.regions %}#}
+{#        <li><h2>{{ a.name }}</h2>#}
+{#    {% endfor %}#}
+{#{% endfor %}#}
+{{ items }}<p>
+{% for i in items.region %}
+    {{ i }}<br>
+    {% for b in i.blocks %}
+        {{ b }}
+        {% endfor %}
+{% endfor %}

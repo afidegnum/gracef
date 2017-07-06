@@ -1,0 +1,96 @@
+{% import 'appbuilder/baselib.html' as baselib with context %}
+
+
+{% if appbuilder %}
+    {% set app_name = appbuilder.app_name %}
+{% endif %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{% block page_title %}{{app_name}}{% endblock %}</title>
+
+    {% block head_meta %}
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="NewGraceFoundation Ghana">
+        <meta name="author" content="Flash Alexander">
+            <meta charset="utf-8">
+ <meta name="keywords" content="NewGrace Foundation Ghana, NGO, taking care of children">
+
+    {% endblock %}
+    {% block head_css %}
+
+        <link rel="stylesheet" href="{{url_for('static', filename='assets/css/bootstrap.css') }}" media="screen" />
+    <link class="" href='http://fonts.googleapis.com/css?family=Overlock:regular,italic,700,700italic,900,900italic|Overlock+SC:regular|Chau+Philomene+One:regular|Open+Sans:300,300italic,regular,italic,600,600italic,700,700italic,800,800italic&subset=latin' rel='stylesheet' type='text/css'>
+
+ <style>a {
+  transition: color 250ms linear;
+}
+</style>
+<link rel="stylesheet" href="{{url_for('static', filename='assets/css/style.css') }}">
+
+
+        <link href="{{url_for('appbuilder.static',filename='css/font-awesome.min.css')}}" rel="stylesheet">
+        {% if appbuilder.app_theme %}
+           <link href="{{url_for('appbuilder.static',filename='css/themes/'+ appbuilder.app_theme )}}"  rel="stylesheet">
+        {% endif %}
+
+         <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+         <!--[if lt IE 9]>
+            <script src="{{url_for('appbuilder.static',filename='js/html5shiv.js')}}"></script>
+            <script src="{{url_for('appbuilder.static',filename='js/respond.min.js')}}"></script>
+         <![endif]-->
+
+        <link href="{{url_for('appbuilder.static',filename='datepicker/bootstrap-datepicker.css')}}" rel="stylesheet">
+        <link href="{{url_for('appbuilder.static',filename='select2/select2.css')}}" rel="stylesheet">
+        <link href="{{url_for('appbuilder.static',filename='css/flags/flags16.css')}}" rel="stylesheet">
+        <link href="{{url_for('appbuilder.static',filename='css/ab.css')}}" rel="stylesheet">
+    {% endblock %}
+    {% block head_js %}
+
+ 	<script>
+    var themeHasJQuery = !!window.jQuery;
+</script>
+<script type="text/javascript" src="{{url_for('static', filename='assets/js/jquery.js')}}"></script>
+<script>
+    window._$ = jQuery.noConflict(themeHasJQuery);
+</script>
+
+  <script type="text/javascript" src="{{url_for('static', filename='assets/js/bootstrap.min.js')}}"></script>
+<!--[if lte IE 9]><link rel="stylesheet" href="{{url_for('static', filename='assets/css/layout.ie.css') }}">
+<script src="{{url_for('static', filename='assets/js/layout.ie.js') }}"></script>
+<![endif]-->
+
+<script type="text/javascript" src="{{url_for('static', filename='assets/js/layout.core.js')}}"></script>
+<script src="{{url_for('static', filename='assets/js/CloudZoom.js') }}"></script>
+	<script src="{{url_for('static', filename='assets/js/script.js') }}"></script>
+
+
+
+        <script src="{{url_for('appbuilder.static',filename='js/ab_filters.js')}}"></script>
+        <script src="{{url_for('appbuilder.static',filename='js/ab_actions.js')}}"></script>
+    {% endblock %}
+
+</head>
+
+<body class=" bootstrap bd-body-1  bd-homepage bd-pagebackground-3  bd-margins">
+
+{% block body %}
+{% endblock %}
+
+
+{% block tail_js %}
+    <script src="{{url_for('appbuilder.static',filename='js/bootstrap.min.js')}}"></script>
+    <script src="{{url_for('appbuilder.static',filename='datepicker/bootstrap-datepicker.js')}}"></script>
+    <script src="{{url_for('appbuilder.static',filename='select2/select2.js')}}"></script>
+    <script src="{{url_for('appbuilder.static',filename='js/ab.js')}}"></script>
+{% endblock %}
+
+{% block add_tail_js %}
+{% endblock %}
+
+{% block tail %}
+{% endblock %}
+
+  </body>
+</html>

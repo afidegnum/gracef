@@ -1,0 +1,20 @@
+{% import 'appbuilder/general/lib.html' as lib %}
+{% include 'appbuilder/general/confirm.html' %}
+{% include 'appbuilder/general/alert.html' %}
+
+
+<div class="list-group">
+{% block begin_loop_values %}
+    {% for item in include_columns %}
+        <small class="text-muted text-right">{{item}}</small>
+        <div>{{value_columns[loop.index-1]}}</div>
+    {% endfor %}
+{% endblock %}
+</div>
+
+
+<div class="well well-sm">
+    {{ lib.render_action_links(actions, pk, modelview_name) }}
+    {{ lib.lnk_back() }}
+</div>
+

@@ -1,0 +1,285 @@
+{% extends "appbuilder/baselayout.html" %}
+{% import 'appbuilder/general/lib.html' as lib %}
+
+
+
+
+	<script>
+    var themeHasJQuery = !!window.jQuery;
+</script>
+<script type="text/javascript" src="{{url_for('static', filename='assets/js/jquery.js')}}"></script>
+<script>
+    window._$ = jQuery.noConflict(themeHasJQuery);
+</script>
+
+{% block head_meta %}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8">
+     <meta name="keywords" content="HTML, CSS, JavaScript">
+{% endblock %}
+
+  {% block head_css %}
+       <style>a {
+  transition: color 250ms linear;
+}
+</style>
+
+<link rel="stylesheet" href="{{url_for('static', filename='assets/css/bootstrap.css') }}" media="screen" />
+	<link rel="stylesheet" href="{{url_for('static', filename='assets/css/style.css') }}">
+<link rel="stylesheet" href="{{url_for('static', filename='assets/css/layout.ie.css') }}">
+ <link class="" href='http://fonts.googleapis.com/css?family=Open+Sans:300,300italic,regular,italic,600,600italic,700,700italic,800,800italic&subset=latin' rel='stylesheet' type='text/css'>
+{% endblock %}
+
+{% block head_js %}
+
+<script type="text/javascript" src="{{url_for('static', filename='assets/js/bootstrap.min.js')}}"></script>
+<!--[if lte IE 9]>
+<script src="{{url_for('static', filename='assets/js/layout.ie.js') }}"></script>
+<![endif]-->
+<script type="text/javascript" src="{{url_for('static', filename='assets/js/layout.core.js')}}"></script>
+<script src="{{url_for('static', filename='assets/js/CloudZoom.js') }}"></script>
+	<script src="{{url_for('static', filename='assets/js/script.js') }}"></script>
+
+{% endblock %}
+
+{% block content %}
+
+
+
+		<div class=" bd-stretchtobottom-1 bd-stretch-to-bottom" data-control-selector=".bd-contentlayout-1">
+<div class="bd-contentlayout-1 bd-page-width   bd-sheetstyles  bd-no-margins bd-margins" >
+    <div class="bd-container-inner">
+
+        <div class="bd-flex-vertical bd-stretch-inner bd-no-margins">
+
+            <div class="bd-flex-horizontal bd-flex-wide bd-no-margins">
+
+                <div class="bd-flex-vertical bd-flex-wide bd-no-margins">
+
+
+                    <div class=" bd-layoutitemsbox-1 bd-flex-wide bd-margins">
+    <div class=" bd-content-13">
+
+    <div class=" bd-htmlcontent-1 bd-margins"
+ data-page-id="page.0">
+    <section class=" bd-section-1 bd-page-width bd-tagstyles bd-textureoverlay bd-textureoverlay-2 " id="section4" data-section-title="Row with Background Image">
+    <div class="bd-container-inner bd-margins clearfix">
+        <div class=" bd-layoutbox-17 bd-page-width  bd-no-margins clearfix">
+    <div class="bd-container-inner">
+        <h2 class=" bd-textblock-2 bd-content-element">
+    Hi, I am Web Designer
+</h2>
+
+		<h1 class=" bd-textblock-8 bd-content-element">
+    i Create Sites
+</h1>
+
+		<p class=" bd-textblock-11 bd-content-element">
+    Create just what you need for your Perfect Website.
+</p>
+
+		<div class=" bd-spacer-2 clearfix"></div>
+
+		<a
+ href="" class="bd-linkbutton-2  bd-button-12  bd-own-margins bd-content-element"    >
+    View Portfolio
+</a>
+    </div>
+</div>
+    </div>
+</section>
+
+		<section class=" bd-section-7 bd-page-width bd-tagstyles " id="section4" data-section-title="Travel Three Columns">
+    <div class="bd-container-inner bd-margins clearfix">
+        <div class=" bd-layoutcontainer-6 bd-page-width  bd-columns bd-no-margins">
+    <div class="bd-container-inner">
+        <div class="container-fluid">
+            <div class="row
+ bd-row-flex
+ bd-row-align-top">
+                <div class=" bd-columnwrapper-10
+ col-sm-4">
+    <div class="bd-layoutcolumn-10 bd-column" ><div class="bd-vertical-align-wrapper"><img class="bd-imagelink-2 bd-imagescaling bd-imagescaling-3 bd-own-margins bd-imagestyles-8   "  src="{{url_for('static', filename='assets/images/51e2d90719fc898c3867318ff24aca22_qwderf.jpg')}}">
+
+		<h2 class=" bd-textblock-14 bd-content-element">
+    Explore by&nbsp;Destination
+</h2>
+
+		<div class=" bd-spacer-5 clearfix"></div>
+
+		<p class=" bd-textblock-16 bd-content-element">
+    Research and discover new vacation destinations and experiences by exploring our destination guides, featured itineraries, sample pricing and special offers.
+</p>
+
+		<div class=" bd-spacer-7 clearfix"></div>
+
+		<a
+ href="" class="bd-linkbutton-6  bd-button-14 bd-icon bd-icon-26 bd-own-margins bd-content-element"    >
+    view more
+</a></div></div>
+</div>
+
+		<div class=" bd-columnwrapper-14
+ col-sm-4">
+    <div class="bd-layoutcolumn-14 bd-column" ><div class="bd-vertical-align-wrapper"><img class="bd-imagelink-7 bd-imagescaling bd-imagescaling-6 bd-own-margins bd-imagestyles-12   "  src="{{url_for('static', filename='assets/images/a04c678b88162813fb87129e61be8af5_wertgy.jpg')}}">
+
+		<h2 class=" bd-textblock-18 bd-content-element">
+    Connect with a Agent
+</h2>
+
+		<div class=" bd-spacer-9 clearfix"></div>
+
+		<p class=" bd-textblock-20 bd-content-element">
+    We recognize that no two travelers and no two trips are exactly alike. Our travel agents will personalize your vacation by taking time to understand your travel style.
+</p>
+
+		<div class=" bd-spacer-11 clearfix"></div>
+
+		<a
+ href="" class="bd-linkbutton-8  bd-button-16 bd-icon bd-icon-28 bd-own-margins bd-content-element"    >
+    view more
+</a></div></div>
+</div>
+
+		<div class=" bd-columnwrapper-16
+ col-sm-4">
+    <div class="bd-layoutcolumn-16 bd-column" ><div class="bd-vertical-align-wrapper"><img class="bd-imagelink-9 bd-imagescaling bd-imagescaling-8 bd-own-margins bd-imagestyles-13   "  src="{{url_for('static', filename='assets/images/c5fd8f8937cbae7c2f7eab920e3c6b79_wedrfgt.jpg')}}">
+
+		<h2 class=" bd-textblock-22 bd-content-element">
+    Experience Group Travel
+</h2>
+
+		<div class=" bd-spacer-13 clearfix"></div>
+
+		<p class=" bd-textblock-26 bd-content-element">
+    Group vacations are a specialty of ours.  Join one of our exclusive, custom escorted trips, let us customize a unique itinerary and create affinity group experiences.
+</p>
+
+		<div class=" bd-spacer-15 clearfix"></div>
+
+		<a
+ href="" class="bd-linkbutton-11  bd-button-17 bd-icon bd-icon-31 bd-own-margins bd-content-element"    >
+    view more
+</a></div></div>
+</div>
+            </div>
+        </div>
+    </div>
+</div>
+    </div>
+</section>
+</div>
+</div>
+</div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</div></div>
+
+		<footer class=" bd-footerarea-1 bd-margins">
+        <section class=" bd-section-2 bd-page-width bd-tagstyles " id="section4" data-section-title="Three Columns">
+    <div class="bd-container-inner bd-margins clearfix">
+        <div class="bd-containereffect-2 container-effect container "><div class=" bd-layoutcontainer-9  bd-columns bd-no-margins">
+    <div class="bd-container-inner">
+        <div class="container-fluid">
+            <div class="row
+ bd-row-flex
+ bd-row-align-middle">
+                <div class=" bd-columnwrapper-18
+ col-md-4
+ col-sm-6">
+    <div class="bd-layoutcolumn-18 bd-column" ><div class="bd-vertical-align-wrapper"><div class="bd-textgroup-2  bd-block-6"  >
+    <div class="bd-container-inner">
+        <div class="media">
+
+ <img class="bd-imagelink-11 bd-own-margins bd-imagestyles-14 pull-left bd-media-xs media-object "  src="{{url_for('static', filename='assets/images/776108f1de667649068d7f21a7fbf2d3_billionphotos2459216.svg')}}">
+            <div class="media-body">
+
+
+                <div class="bd-blockcontent bd-tagstyles bd-no-margins  bd-content-element" >
+                    Phone:<br>
++149 31 209 44
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div></div></div>
+</div>
+
+		<div class=" bd-columnwrapper-20
+ col-md-4
+ col-sm-6">
+    <div class="bd-layoutcolumn-20 bd-column" ><div class="bd-vertical-align-wrapper"><div class="bd-textgroup-5  bd-block-8"  >
+    <div class="bd-container-inner">
+        <div class="media">
+
+ <img class="bd-imagelink-14 bd-own-margins bd-imagestyles-17 pull-left bd-media-xs media-object "  src="{{url_for('static', filename='assets/images/74d18c215c51f75b447f6c9f392a29ee_billionphotos2460650.svg')}}">
+            <div class="media-body">
+
+
+                <div class="bd-blockcontent bd-tagstyles bd-no-margins  bd-content-element" >
+                    4292 Elk City Road<br>
+Alexandria, LA 71301
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div></div></div>
+</div>
+
+		<div class=" bd-columnwrapper-22
+ col-md-4
+ col-sm-6">
+    <div class="bd-layoutcolumn-22 bd-column" ><div class="bd-vertical-align-wrapper"><div class="bd-textgroup-7  bd-block-9"  >
+    <div class="bd-container-inner">
+        <div class="media">
+
+ <img class="bd-imagelink-16 bd-own-margins bd-imagestyles-18 pull-left bd-media-xs media-object "  src="{{url_for('static', filename='assets/images/cdadc3097c73211243f954177e953928_billionphotos2459080.svg')}}">
+            <div class="media-body">
+
+
+                <div class="bd-blockcontent bd-tagstyles bd-no-margins  bd-content-element" >
+                    E-mail:<br>
+<a href="mailto:info@company.com">info@company.com</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div></div></div>
+</div>
+            </div>
+        </div>
+    </div>
+</div></div>
+
+		<div class=" bd-pagefooter-2">
+    <div class="bd-container-inner">
+
+        {{ items }}<p>
+{% for i in items.region %}
+    {{ i }}<br>
+    {% for b in i.blocks %}
+        {{ b }}
+        {% endfor %}
+{% endfor %}
+
+    </div>
+</div>
+    </div>
+</section>
+</footer>
+
+		<div data-smooth-scroll data-animation-time="250" class=" bd-smoothscroll-3"><a href="#" class=" bd-backtotop-1 ">
+    <span class="bd-icon-67 bd-icon "></span>
+</a></div>
+
+{% endblock %}
